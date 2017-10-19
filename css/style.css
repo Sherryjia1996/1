@@ -4,6 +4,11 @@ html, body {
   background-color: rgb(241, 241, 241);
 }
 
+.name {
+  font-family: 'Lobster', cursive;
+  font-size: 5em;
+}
+
 .container {
   padding: 25px;
   align-content: center;
@@ -14,20 +19,54 @@ html, body {
   background-color: ;
   border-radius: 25px;
   background-color: white;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.20);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.05);
 }
 
 #profile-pic {
   display: block;
   width: 50%;
   height: 25%;
+  margin: 0 auto;
 }
 
 #profile-pic img {
   width: inherit;
   height: auto;
   border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 }
+
+#profile-pic img:hover {
+  box-shadow: 0 14px 20px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.20);
+  transform: scale(1.02);
+}
+
+
+.pictures {
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: wrap;
+}
+
+.pictures img {
+  align-self: center;
+  flex-shrink: 0;
+  max-width: 50%;
+  width: auto;
+  height: auto;
+  position: relative;
+  display: inline-block;
+  float: left;
+  padding: 10px;
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.pictures img:hover {
+  box-shadow: 0 14px 20px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.1);
+  transform: scale(1.02);
+}
+
 
 .btn-circle.btn-lg {
   width: 50px;
